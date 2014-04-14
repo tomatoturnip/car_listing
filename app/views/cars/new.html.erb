@@ -5,5 +5,6 @@
   <%= f.input :year, collection: 1980..2015 %>
   <%= f.input :mileage %>
   <%= f.input :description %>
+  <%= f.association :manufacturer, label_method: :name %>
   <%= f.button :submit, value: 'Create Car' %>
 <% end %>

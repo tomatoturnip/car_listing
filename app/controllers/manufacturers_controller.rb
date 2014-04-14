@@ -20,6 +20,12 @@ class ManufacturersController < ApplicationController
     @manufacturer = Manufacturer.find(params[:id])
   end
 
+  def destroy
+    @manufacturer = Manufacturer.find(params[:id])
+    @manufacturer.delete
+    redirect_to manufacturers_path
+  end
+
   private
   def manufacturer_params
     params.require(:manufacturer).permit(:name, :country)

@@ -3,7 +3,7 @@
     <p><strong><%= manufacturer.name %></strong>
     <p><%= manufacturer.country %></p>
 
-    <%#= link_to car.color, dog %>
-    <%#= link_to "Destroy #{.name}", dog, method: :delete %>
+    <%= link_to manufacturer.name, manufacturer %>
+    <%= link_to "Destroy #{manufacturer.name}", manufacturer, method: :delete %>
   </div>
 <% end %>
