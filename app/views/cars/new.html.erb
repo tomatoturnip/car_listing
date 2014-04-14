@@ -1,0 +1,10 @@
+<h1>Create a new car</h1>
+
+<%= simple_form_for @car do |f| %>
+  <%= f.input :color %>
+  <%= f.input :year, collection: 1980..2015 %>
+  <%= f.input :mileage %>
+  <%= f.input :description %>
+  <%= f.association :manufacturer, label_method: :name, include_blank: true %>
+  <%= f.button :submit, value: 'Create Car' %>
+<% end %>

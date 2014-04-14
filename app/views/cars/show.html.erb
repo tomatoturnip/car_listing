@@ -1,0 +1,32 @@
+<h1>Cars</h1>
+
+<table>
+  <thead>
+    <th>Color</th>
+    <th>Year</th>
+    <th>Mileage</th>
+    <th>Description</th>
+    <th>Manufacturer</th>
+
+
+  </thead>
+
+  <tbody>
+    <tr>
+      <td><%= @car.description %></td>
+      <td><%= @car.color %></td>
+      <td><%= @car.year %></td>
+      <td><%= @car.mileage %></td>
+      <% if @car.manufacturer.present? %>
+        <td><%= @car.manufacturer.name %>
+      <% end %>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+
+

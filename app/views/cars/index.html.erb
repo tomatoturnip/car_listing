@@ -1,0 +1,29 @@
+<h1>Cars</h1>
+
+<table>
+  <thead>
+    <th>Description</th>
+    <th>Color</th>
+    <th>Year</th>
+    <th>Mileage</th>
+    <th>Manufacturer</th>
+  </thead>
+
+  <tbody>
+  <% if @cars.present? %>
+    <% @cars.each do |car| %>
+    <tr>
+      <td><%= car.description %></td>
+      <td><%= car.color %></td>
+      <td><%= car.year %></td>
+      <td><%= car.mileage %></td>
+      <% if car.manufacturer.present? %>
+        <td><%= car.manufacturer.name %>
+      <% end %>
+    <% end %>
+  <% end %>
+    </tr>
+  </tbody>
+</table>
+
+

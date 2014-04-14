@@ -1,0 +1,19 @@
+<h1>Manufacturers</h1>
+
+<table>
+  <thead>
+    <th>Name</th>
+    <th>Country</th>
+    <th>Delete Manufacturer</th>
+  </thead>
+
+  <tbody>
+    <% @manufacturers.each do |manufacturer| %>
+    <tr>
+      <td><%= link_to manufacturer.name, manufacturer %></td>
+      <td><%= manufacturer.country %></td>
+      <td><%= link_to "Destroy", manufacturer, method: :delete %></td>
+    <% end %>
+  </tr>
+  </tbody>
+</table>
