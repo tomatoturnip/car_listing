@@ -7,7 +7,7 @@ feature 'delete a manufacturer' do
     manufacturer_count = Manufacturer.count
     expect(page).to have_content('VW')
 
-    click_on 'Destroy VW'
+    click_on 'Destroy'
     expect(page).to_not have_content('VW')
     expect(Manufacturer.count).to eql(manufacturer_count - 1)
   end
