@@ -28,4 +28,11 @@ feature 'record a car', %Q{
     expect(page).to have_content("Successfully created car")
     expect(current_path).to eql(new_car_path)
   end
+
+  scenario 'create an invalid car record' do
+    visit new_car_path
+
+    click_button 'Create Car'
+    expect(page).to have_content("can't be blank")
+  end
 end

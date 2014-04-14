@@ -1,5 +1,8 @@
 require 'spec_helper'
 
 describe Car do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it { should validate_presence_of(:color) }
+  it { should validate_presence_of(:year) }
+  it { should validate_presence_of(:mileage) }
+  it { should ensure_inclusion_of(:year).in_array('1980'..'2015') }
 end
