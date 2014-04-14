@@ -1,0 +1,9 @@
+<% @manufacturers.each do |manufacturer| %>
+ <div>
+    <p><strong><%= manufacturer.name %></strong>
+    <p><%= manufacturer.country %></p>
+
+    <%#= link_to car.color, dog %>
+    <%#= link_to "Destroy #{.name}", dog, method: :delete %>
+  </div>
+<% end %>
